@@ -1,0 +1,9 @@
+---
+applications:
+- name: spring-cloudconnector
+  memory: 1024M
+  host: spring-cloudconnector
+  domain: cfapps.io
+  buildpack: java_buildpack
+  services:
+  - my-msqldb

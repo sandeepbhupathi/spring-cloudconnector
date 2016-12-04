@@ -23,6 +23,7 @@ public class SpringCloudconnectorApplication {
 	
 	@RequestMapping(path="/testDB",produces={"application/json"})
 	public List<Album> testDB(){
+		System.out.println("===================== Test SYSOUT ================");
 		List<Album> listAlbm =  jdbcTemp.query("select * from album",new BeanPropertyRowMapper(Album.class));
 		System.out.println("============="+listAlbm.size());
 		return listAlbm;
